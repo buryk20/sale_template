@@ -1,0 +1,210 @@
+.promo-template {
+    color: #ffffff;
+    font-family: $fontRobotoReg;
+    position: relative;
+
+    &__img-back {
+        width: 100%;
+        height: 624px;
+        overflow: hidden;
+        position: relative;
+        @include bigMobileWidth {
+            & {
+                height: 521px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+        @include littleMob {
+            & {
+                height: 490px;
+            }
+        }
+        @include littleSmolMob {
+            & {
+                height: 460px;
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 624px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    &__img-width {
+        @include bigMobileWidth {
+            & {
+                width: 375px;
+            }
+        }
+    }
+
+    &__img-width-wrp {
+        @include bigMobileWidth {
+            & {
+                margin-bottom: 148px;
+            }
+        }
+    }
+
+    &__text {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include startAdaptiveSmol {
+            & {
+                @include padMob;
+            }
+        }
+        @include bigMobileWidth {
+            & {
+                padding-top: 127px;
+                position: relative;
+            }
+        }
+    }
+
+    &__wrp-bun {
+        position: relative;
+    }
+
+    &__text-pos {
+        height: 624px;
+        @include flexDispCetnColu;
+        align-items: flex-start;
+        color: #ffffff;
+        @include bigMobileWidth {
+            & {
+                height: auto;
+                align-items: center;
+                color: $colorCardProd;
+            }
+        }
+    }
+
+    &__text-title {
+        max-width: 637px;
+        margin-bottom: 32px;
+        font-size: 48px;
+        font-weight: 500;
+        text-transform: uppercase;
+        @include bigMobileWidth {
+            & {
+                margin-bottom: 24px;
+                text-align: center;
+                font-size: 30px;
+            }
+        }
+    }
+
+    &__text-main {
+        max-width: 637px;
+        margin-bottom: 32px;
+        line-height: 24px;
+        @include bigMobileWidth {
+            & {
+                text-align: center;
+                line-height: 14px;
+            }
+        }
+    }
+
+    &__text-star {
+        color: $colorCard;
+    }
+
+    &__text-img-wrp {
+        @include pageGredCard;
+        @include flexDispCetnColu;
+        flex-direction: row;
+        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        @include bigMobileWidth {
+            & {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+        }
+    }
+}
+
+.promo-template-counter {
+    max-width: 524px;
+    width: 100%;
+    margin-bottom: 32px;
+    @include flexDispCetnColu;
+    flex-direction: row;
+    justify-content: space-between;
+    @include bigMobileWidth {
+        & {
+            margin-bottom: 24px;
+            justify-content: center;
+        }
+    }
+
+    &__wrp {
+        @include flexDispCetnColu;
+        flex-direction: row;
+        @include bigMobileWidth {
+            & {
+                width: 100%;
+            }
+        }
+    }
+
+    &__number {
+        font-size: 72px;
+        font-weight: 700;
+        line-height: 0.9;
+        @include bigMobileWidth {
+            & {
+                font-size: 48px;
+            }
+        }
+    }
+
+    &__wrp-number {
+        min-width: 95px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        @include flexDispCetnColu;
+        color: $colorCardProd;
+        background-color: #EFEEEE;
+        border-radius: 8px;
+        @include bigMobileWidth {
+            & {
+                min-width: auto;
+                max-width: 75px;
+                width: 100%;
+
+            }
+        }
+    }
+
+    &__colon {
+        font-size: 72px;
+        color: $colorCard;
+        @include bigMobileWidth {
+            & {
+                font-size: 48px;
+            }
+        }
+    }
+
+    &__btn {
+        @include btnCardBuy;
+        max-width: 125px;
+        transition: all 0.4s;
+        &:hover {
+            background-color: $colorHov;
+            transition: all 0.4s;
+        }
+    }
+}
